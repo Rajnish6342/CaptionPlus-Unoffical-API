@@ -2,7 +2,7 @@ const api = require("./api");
 const endpoints = require("./endpoints");
 const express = require("express");
 const app = express();
-const port = 8000;
+const port = process.env.port;
 
 app.use("/api/:topic/", api);
 app.use("/", endpoints);
